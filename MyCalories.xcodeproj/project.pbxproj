@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */; };
+		14ECE0F12C36EB850046165F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 14ECE0F02C36EB850046165F /* Alamofire */; };
+		14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0F42C36EBC60046165F /* ServiceApi.swift */; };
 		B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */; };
 		B82EFAA92C358051006A818D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFAA82C358051006A818D /* Assets.xcassets */; };
 		B82EFAAC2C358051006A818D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFAAB2C358051006A818D /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionResponse.swift; sourceTree = "<group>"; };
+		14ECE0F42C36EBC60046165F /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		B82EFAA12C35804F006A818D /* MyCalories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCaloriesApp.swift; sourceTree = "<group>"; };
 		B82EFAA82C358051006A818D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ECE0F12C36EB850046165F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 		B82EFAB32C35819E006A818D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				14ECE0F42C36EBC60046165F /* ServiceApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 		B82EFAB52C3581B5006A818D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +176,9 @@
 			dependencies = (
 			);
 			name = MyCalories;
+			packageProductDependencies = (
+				14ECE0F02C36EB850046165F /* Alamofire */,
+			);
 			productName = MyCalories;
 			productReference = B82EFAA12C35804F006A818D /* MyCalories.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +207,9 @@
 				Base,
 			);
 			mainGroup = B82EFA982C35804F006A818D;
+			packageReferences = (
+				14ECE0EF2C36EB850046165F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B82EFAA22C35804F006A818D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,6 +237,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
+				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
+				14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +442,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14ECE0EF2C36EB850046165F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		14ECE0F02C36EB850046165F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14ECE0EF2C36EB850046165F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B82EFA992C35804F006A818D /* Project object */;
 }
