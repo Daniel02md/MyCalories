@@ -33,9 +33,33 @@ struct OnBoardingChoseView: View {
                 }
                 .hLeading()
                 .padding(.leading, 10)
-            }
-            Spacer()
-            
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(0..<3) { index in
+                            CardView(title: "Card \(index + 1)", imageName: "image_chose")
+                        }
+                    }
+                    .padding()
+                }
+                
+                VStack {
+                    Text("Current...")
+                        .font(.callout)
+                        .fontWeight(.regular)
+                }
+                .hLeading()
+                .padding(.leading, 10)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        ForEach(0..<3) { index in
+                            CardView(title: "Card \(index + 1)", imageName: "image_chose")
+                        }
+                    }
+                    .padding()
+                }
+            }            
         }
     }
 }

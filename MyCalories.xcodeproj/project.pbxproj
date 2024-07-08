@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */; };
 		14B85AE52C3C1790007A7004 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE42C3C1790007A7004 /* Layout.swift */; };
+		14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE62C3C2C58007A7004 /* CardView.swift */; };
 		14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */; };
 		14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0F42C36EBC60046165F /* ServiceApi.swift */; };
 		B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingChoseView.swift; sourceTree = "<group>"; };
 		14B85AE42C3C1790007A7004 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		14B85AE62C3C2C58007A7004 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionResponse.swift; sourceTree = "<group>"; };
 		14ECE0F42C36EBC60046165F /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		B82EFAA12C35804F006A818D /* MyCalories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalories.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 		B82EFABF2C359461006A818D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				14B85AE62C3C2C58007A7004 /* CardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
 				14B85AE52C3C1790007A7004 /* Layout.swift in Sources */,
 				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
+				14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */,
 				14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
