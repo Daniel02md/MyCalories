@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */; };
+		14B85AE52C3C1790007A7004 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE42C3C1790007A7004 /* Layout.swift */; };
 		14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */; };
-		14ECE0F12C36EB850046165F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 14ECE0F02C36EB850046165F /* Alamofire */; };
 		14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0F42C36EBC60046165F /* ServiceApi.swift */; };
 		B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */; };
 		B82EFAA92C358051006A818D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFAA82C358051006A818D /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingChoseView.swift; sourceTree = "<group>"; };
+		14B85AE42C3C1790007A7004 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionResponse.swift; sourceTree = "<group>"; };
 		14ECE0F42C36EBC60046165F /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		B82EFAA12C35804F006A818D /* MyCalories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalories.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14ECE0F12C36EB850046165F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +115,7 @@
 		B82EFAB62C3581C8006A818D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 		B8F62B6D2C361CC7004DA85D /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				14B85AE42C3C1790007A7004 /* Layout.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -177,7 +181,6 @@
 			);
 			name = MyCalories;
 			packageProductDependencies = (
-				14ECE0F02C36EB850046165F /* Alamofire */,
 			);
 			productName = MyCalories;
 			productReference = B82EFAA12C35804F006A818D /* MyCalories.app */;
@@ -236,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */,
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
+				14B85AE52C3C1790007A7004 /* Layout.swift in Sources */,
 				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
 				14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */,
 			);
@@ -453,14 +458,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		14ECE0F02C36EB850046165F /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 14ECE0EF2C36EB850046165F /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B82EFA992C35804F006A818D /* Project object */;
 }
