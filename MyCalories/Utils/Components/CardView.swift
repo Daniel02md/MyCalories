@@ -9,25 +9,33 @@ import SwiftUI
 
 struct CardView: View {
     var title: String
-    var imageName: String
+    @Binding var isSelected: Bool
 
     var body: some View {
         VStack {
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150)
-                .cornerRadius(10)
-                .clipped()
+            HStack {
+                Circle()
+                    .fill(isSelected ? .black : .gray)
+                    .frame(width: 8, height: 8)
+                Spacer()
+            }
+            .padding()
+
+            Spacer()
 
             Text(title)
                 .font(.headline)
-                .foregroundColor(.primary)
-                .padding([.top, .bottom], 10)
+                .foregroundColor(.clear)
+                .padding(.bottom, 20)
+
+            Spacer()
         }
-        .background(Color.white)
+        .background(isSelected ? Color.blue.opacity(0.1) : Color.white)
         .cornerRadius(15)
         .shadow(radius: 5)
-        .frame(width: 180, height: 250)
+        .frame(width: 146, height: 85)
+        .onTapGesture {
+            isSelected.toggle()
+        }
     }
 }

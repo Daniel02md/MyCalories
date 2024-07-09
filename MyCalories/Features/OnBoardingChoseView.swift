@@ -8,62 +8,56 @@
 import SwiftUI
 
 struct OnBoardingChoseView: View {
+    
+    @State private var isActive: Bool = false
+    
     var body: some View {
-        ZStack {
-            VStack {
-                Image("image_chose")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 295, height: 354)
-                
-                Text("Keep healthy...")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                
-                Text("What are your objectives?")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                
-                VStack {
-                    Text("Chose...")
-                        .font(.callout)
-                        .fontWeight(.regular)
-                }
-                .hLeading()
-                .padding(.leading, 10)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(0..<3) { index in
-                            CardView(title: "Card \(index + 1)", imageName: "image_chose")
-                        }
+        NavigationView {
+            GeometryReader { geometry in
+                ZStack {
+                    Image("woman")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped()
+                    
+                    VStack {
+                        Text("Keep healthy...")
+                            .font(.title)
+                            .fontWeight(.black)
+                            .shadow(radius: 10)
+                        Text("What are your objectives?")
+                            .font(.title)
+                            .fontWeight(.black)
+                            .shadow(radius: 10)
                     }
-                    .padding()
                 }
-                
-                VStack {
-                    Text("Current...")
-                        .font(.callout)
-                        .fontWeight(.regular)
-                }
-                .hLeading()
-                .padding(.leading, 10)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(0..<3) { index in
-                            CardView(title: "Card \(index + 1)", imageName: "image_chose")
-                        }
+                .statusBar(hidden: true)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        isActive = true
                     }
-                    .padding()
+                    //                    Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+                    //                        isActive = true
+                    //                    }
                 }
-            }            
+            }
+            .edgesIgnoringSafeArea(.all)
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
+        .background(
+            NavigationLink(
+                destination: NextView(),
+                isActive: $isActive,
+                label: {
+                    EmptyView()
+                }
+            )
+            .isDetailLink(false)
+        )
     }
 }
-
 
 #Preview {
     OnBoardingChoseView()
