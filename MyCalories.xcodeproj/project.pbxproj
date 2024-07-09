@@ -13,6 +13,10 @@
 		B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */; };
 		B82EFAA92C358051006A818D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFAA82C358051006A818D /* Assets.xcassets */; };
 		B82EFAAC2C358051006A818D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFAAB2C358051006A818D /* Preview Assets.xcassets */; };
+		B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18722C3D72C1008290CE /* NavigationRouter.swift */; };
+		B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18752C3D7343008290CE /* MCRouter.swift */; };
+		B8BC18782C3D754E008290CE /* MCRouterDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18772C3D754E008290CE /* MCRouterDestination.swift */; };
+		B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18792C3D7599008290CE /* RouterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCaloriesApp.swift; sourceTree = "<group>"; };
 		B82EFAA82C358051006A818D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B82EFAAB2C358051006A818D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8BC18722C3D72C1008290CE /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		B8BC18752C3D7343008290CE /* MCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRouter.swift; sourceTree = "<group>"; };
+		B8BC18772C3D754E008290CE /* MCRouterDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRouterDestination.swift; sourceTree = "<group>"; };
+		B8BC18792C3D7599008290CE /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 		B82EFAB42C3581A9006A818D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18742C3D730E008290CE /* Classes */,
 				B82EFABF2C359461006A818D /* Components */,
 				B8F62B6D2C361CC7004DA85D /* Styles */,
 				B82EFABA2C358805006A818D /* Protocol */,
@@ -128,6 +137,7 @@
 		B82EFAB82C3587F5006A818D /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18772C3D754E008290CE /* MCRouterDestination.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -142,6 +152,7 @@
 		B82EFABA2C358805006A818D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18722C3D72C1008290CE /* NavigationRouter.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -149,8 +160,17 @@
 		B82EFABF2C359461006A818D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18792C3D7599008290CE /* RouterView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B8BC18742C3D730E008290CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC18752C3D7343008290CE /* MCRouter.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B8F62B6D2C361CC7004DA85D /* Styles */ = {
@@ -237,7 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
+				B8BC18782C3D754E008290CE /* MCRouterDestination.swift in Sources */,
+				B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */,
 				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
+				B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */,
+				B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */,
 				14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
