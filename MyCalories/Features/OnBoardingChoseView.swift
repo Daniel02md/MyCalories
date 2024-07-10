@@ -12,7 +12,7 @@ struct OnBoardingChoseView: View {
     @State private var isActive: Bool = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             GeometryReader { geometry in
                 ZStack {
                     Image("woman")
@@ -37,25 +37,15 @@ struct OnBoardingChoseView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         isActive = true
                     }
-                    //                    Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
-                    //                        isActive = true
-                    //                    }
                 }
             }
             .edgesIgnoringSafeArea(.all)
+            .navigationDestination(isPresented: $isActive) {
+                NextView()
+                    .navigationBarBackButtonHidden(true)
+            }
+            
         }
-        .navigationTitle("")
-        .navigationBarHidden(true)
-        .background(
-            NavigationLink(
-                destination: NextView(),
-                isActive: $isActive,
-                label: {
-                    EmptyView()
-                }
-            )
-            .isDetailLink(false)
-        )
     }
 }
 

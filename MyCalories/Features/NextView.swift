@@ -1,8 +1,8 @@
 //
-//  NextView().swift
+//  NextView.swift
 //  MyCalories
 //
-//  Created by marcelodearaujo on 09/07/24.
+//  Created by marcelodearaujo on 10/07/24.
 //
 
 import SwiftUI
