@@ -55,7 +55,12 @@ struct FoodView: View {
                     .textInputAutocapitalization(.never)
                     .keyboardType(.default)
                 
-                NavigationLink(destination: GraficCircleView(nutrients: nutritionResponse?.totalNutrients.map { (key, value) in (name: value.label, quantity: value.quantity) } ?? [], errorMessage: errorMessage, foodName: foodParam)) {
+                NavigationLink(
+                    destination: GraficCircleView(
+                        nutrients: extractKeyNutrients(nutritionResponse),
+                        errorMessage: errorMessage,
+                        foodName: foodParam)) {
+
                     Text("Nutrition Analysis")
                         .foregroundColor(.white)
                         .padding()
@@ -80,5 +85,20 @@ struct FoodView: View {
             }
             .navigationTitle("Nutrition Analysis")
         }
+    }
+    
+    func extractKeyNutrients(_ response: NutritionResponse?) -> [(name: String, quantity: Double)] {
+        guard let response = response else { return [] }
+        var nutrients: [(name: String, quantity: Double)] = []
+        if let calories = response.totalNutrients["ENERC_KCAL"]?.quantity {
+            nutrients.append((name: "Calories", quantity: calories))
+        }
+        if let fats = response.totalNutrients["FAT"]?.quantity {
+            nutrients.append((name: "Total Fat", quantity: fats))
+        }
+        if let proteins = response.totalNutrients["PROCNT"]?.quantity {
+            nutrients.append((name: "Protein", quantity: proteins))
+        }
+        return nutrients
     }
 }
