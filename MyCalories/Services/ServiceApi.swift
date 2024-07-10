@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Alamofire
+//import Alamofire
 import Combine
 
 class ServiceApi {
@@ -133,34 +133,34 @@ class ServiceApi {
         }
     }
     
-    func getNutritionAnalysisAlamofire(
-        nutritionType: String,
-        value: String,
-        unit: String,
-        foodParam: String,
-        completion: @escaping (NutritionResponseCode?, NutritionResponse?, Error?) -> Void
-    ) {
-        // Construir a URL
-        let url = baseURL
-        let parameters: [String: String] = [
-            "app_id": appID,
-            "app_key": appKey,
-            "nutrition-type": nutritionType,
-            "ingr": "\(value) \(unit) \(foodParam)"
-        ]
-        
-        // Realizar a requisição com Alamofire
-        AF.request(url, method: .get, parameters: parameters)
-            .validate()
-            .responseDecodable(of: NutritionResponse.self) { response in
-                switch response.result {
-                case .success(let nutritionResponse):
-                    completion(nil, nutritionResponse, nil)
-                case .failure(let error):
-                    completion(nil, nil, error)
-                }
-            }
-    }
+//    func getNutritionAnalysisAlamofire(
+//        nutritionType: String,
+//        value: String,
+//        unit: String,
+//        foodParam: String,
+//        completion: @escaping (NutritionResponseCode?, NutritionResponse?, Error?) -> Void
+//    ) {
+//        // Construir a URL
+//        let url = baseURL
+//        let parameters: [String: String] = [
+//            "app_id": appID,
+//            "app_key": appKey,
+//            "nutrition-type": nutritionType,
+//            "ingr": "\(value) \(unit) \(foodParam)"
+//        ]
+//        
+//        // Realizar a requisição com Alamofire
+//        AF.request(url, method: .get, parameters: parameters)
+//            .validate()
+//            .responseDecodable(of: NutritionResponse.self) { response in
+//                switch response.result {
+//                case .success(let nutritionResponse):
+//                    completion(nil, nutritionResponse, nil)
+//                case .failure(let error):
+//                    completion(nil, nil, error)
+//                }
+//            }
+//    }
     
     func getNutritionAnalysisCombine(
         nutritionType: String,

@@ -11,6 +11,7 @@ import SwiftUI
 struct MyCaloriesApp: App {
     var body: some Scene {
         WindowGroup {
+            OnBoardingChoseView()
         }
     }
 }
