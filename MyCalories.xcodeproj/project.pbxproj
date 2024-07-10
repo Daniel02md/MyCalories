@@ -20,6 +20,10 @@
 		B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18752C3D7343008290CE /* MCRouter.swift */; };
 		B8BC18782C3D754E008290CE /* MCRouterDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18772C3D754E008290CE /* MCRouterDestination.swift */; };
 		B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18792C3D7599008290CE /* RouterView.swift */; };
+		BCD349582C3EA99D001375D2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD349572C3EA99D001375D2 /* HeaderView.swift */; };
+		BCD3495A2C3EA9D2001375D2 /* TLButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD349592C3EA9D2001375D2 /* TLButtonView.swift */; };
+		BCD3495D2C3EAA1F001375D2 /* InputViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3495C2C3EAA1F001375D2 /* InputViewViewModel.swift */; };
+		BCD3495F2C3EAA48001375D2 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3495E2C3EAA48001375D2 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		B8BC18752C3D7343008290CE /* MCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRouter.swift; sourceTree = "<group>"; };
 		B8BC18772C3D754E008290CE /* MCRouterDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRouterDestination.swift; sourceTree = "<group>"; };
 		B8BC18792C3D7599008290CE /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		BCD349572C3EA99D001375D2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		BCD349592C3EA9D2001375D2 /* TLButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButtonView.swift; sourceTree = "<group>"; };
+		BCD3495C2C3EAA1F001375D2 /* InputViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewViewModel.swift; sourceTree = "<group>"; };
+		BCD3495E2C3EAA48001375D2 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		B82EFAA32C35804F006A818D /* MyCalories */ = {
 			isa = PBXGroup;
 			children = (
+				BCD3495B2C3EAA01001375D2 /* ViewModel */,
 				B82EFAB22C3580F7006A818D /* App */,
 				B82EFAB52C3581B5006A818D /* Models */,
 				B82EFAB42C3581A9006A818D /* Utils */,
@@ -130,6 +139,7 @@
 			children = (
 				14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */,
 				14D6A0242C3E9BCB00DD3DFC /* NextView.swift */,
+				BCD3495E2C3EAA48001375D2 /* InputView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -170,6 +180,8 @@
 			children = (
 				14B85AE62C3C2C58007A7004 /* CardView.swift */,
 				B8BC18792C3D7599008290CE /* RouterView.swift */,
+				BCD349572C3EA99D001375D2 /* HeaderView.swift */,
+				BCD349592C3EA9D2001375D2 /* TLButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,6 +200,14 @@
 				14B85AE42C3C1790007A7004 /* Layout.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		BCD3495B2C3EAA01001375D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCD3495C2C3EAA1F001375D2 /* InputViewViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD3495D2C3EAA1F001375D2 /* InputViewViewModel.swift in Sources */,
+				BCD3495A2C3EA9D2001375D2 /* TLButtonView.swift in Sources */,
 				14D6A0252C3E9BCB00DD3DFC /* NextView.swift in Sources */,
 				14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */,
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
@@ -272,8 +294,10 @@
 				14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */,
 				B8BC18782C3D754E008290CE /* MCRouterDestination.swift in Sources */,
 				B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */,
+				BCD349582C3EA99D001375D2 /* HeaderView.swift in Sources */,
 				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
 				B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */,
+				BCD3495F2C3EAA48001375D2 /* InputView.swift in Sources */,
 				B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */,
 				14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */,
 			);

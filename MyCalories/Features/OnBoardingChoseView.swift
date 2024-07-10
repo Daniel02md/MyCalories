@@ -41,7 +41,7 @@ struct OnBoardingChoseView: View {
             }
             .edgesIgnoringSafeArea(.all)
             .navigationDestination(isPresented: $isActive) {
-                NextView()
+                InputView()
                     .navigationBarBackButtonHidden(true)
             }
             
