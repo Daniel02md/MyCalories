@@ -12,7 +12,19 @@ final class AppRouter: NavigationRouter, ObservableObject{
     typealias Destination = MCRouterDestination
     
     @ViewBuilder func view(for route: Destination) -> some View {
-        
+        switch(route){
+        case .InputView:
+            InputView()
+                .navigationBarHidden(true)
+        case .OnBoardingChose:
+            OnBoardingChoseView()
+        case .MainPage:
+            MainPage()
+                .navigationBarBackButtonHidden(true)
+        case .FoodView(let title):
+            FoodView()
+                .navigationTitle(title)
+        }
     }
     
     @Published var navigationPath: NavigationPath = NavigationPath()
