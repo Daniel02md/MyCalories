@@ -15,6 +15,7 @@ struct FoodView: View {
     @State private var nutritionResponse: NutritionResponse?
     @State private var errorMessage: String?
     @State private var selectedNumber = 0
+    @State private var searchText = ""
     
     let serviceApi = ServiceApi()
     let units = ["g", "t", "tb", "oz", "kg", "cups", "ml"]
@@ -23,6 +24,42 @@ struct FoodView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                HStack {
+                    TextField("Search", text: $searchText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.default)
+                    
+                    Button(action: {
+                        serviceApi.getNutritionAnalysisCompletion(nutritionType: selectedNutritionType, value: value, unit: selectedUnit, foodParam: searchText) { (code, response, error) in
+                            if let response = response {
+                                self.nutritionResponse = response
+                                self.errorMessage = nil
+                            } else if let error = error {
+                                self.errorMessage = error.localizedDescription
+                                self.nutritionResponse = nil
+                            } else if let code = code {
+                                self.errorMessage = code.message
+                                self.nutritionResponse = nil
+                            }
+                        }
+                    }) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.white)
+                            .padding(8)
+                            .background(Color.green)
+                            .cornerRadius(8)
+                    }
+                    .padding(.trailing, 8)
+                }
+                Spacer()
+                
+                if let nutritionResponse = nutritionResponse {
+                    TableNutrition(nutritionResponse: nutritionResponse, searchText: $searchText)
+                        .padding(.top)
+                }
+                
                 HStack {
                     Text("Nutrition Type")
                         .hLeading()
@@ -60,28 +97,28 @@ struct FoodView: View {
                         nutrients: extractKeyNutrients(nutritionResponse),
                         errorMessage: errorMessage,
                         foodName: foodParam)) {
-
-                    Text("Nutrition Analysis")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                }
-                .padding(.top)
-                .simultaneousGesture(TapGesture().onEnded {
-                    serviceApi.getNutritionAnalysisCompletion(nutritionType: selectedNutritionType, value: value, unit: selectedUnit, foodParam: foodParam) { (code, response, error) in
-                        if let response = response {
-                            self.nutritionResponse = response
-                            self.errorMessage = nil
-                        } else if let error = error {
-                            self.errorMessage = error.localizedDescription
-                            self.nutritionResponse = nil
-                        } else if let code = code {
-                            self.errorMessage = code.message
-                            self.nutritionResponse = nil
+                            
+                            Text("Nutrition Analysis")
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.green)
+                                .cornerRadius(8)
                         }
-                    }
-                })
+                        .padding(.top)
+                        .simultaneousGesture(TapGesture().onEnded {
+                            serviceApi.getNutritionAnalysisCompletion(nutritionType: selectedNutritionType, value: value, unit: selectedUnit, foodParam: foodParam) { (code, response, error) in
+                                if let response = response {
+                                    self.nutritionResponse = response
+                                    self.errorMessage = nil
+                                } else if let error = error {
+                                    self.errorMessage = error.localizedDescription
+                                    self.nutritionResponse = nil
+                                } else if let code = code {
+                                    self.errorMessage = code.message
+                                    self.nutritionResponse = nil
+                                }
+                            }
+                        })
             }
             .navigationTitle("Nutrition Analysis")
         }
