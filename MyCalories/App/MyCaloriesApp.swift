@@ -11,7 +11,9 @@ import SwiftUI
 struct MyCaloriesApp: App {
     var body: some Scene {
         WindowGroup {
-            FoodView()
+            RouterView{
+                OnBoardingChoseView()
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ struct MainPage: View {
             HStack(spacing: 20){
                 ForEach(dailyMeals, id: \.self){ meal in
                     DailyMealButton(meal){
-                        //action
+                        router.navigate(to: .FoodView(title: meal))
                     }
                     
                 }
