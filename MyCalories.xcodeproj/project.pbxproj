@@ -10,7 +10,10 @@
 		14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */; };
 		14B85AE52C3C1790007A7004 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE42C3C1790007A7004 /* Layout.swift */; };
 		14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE62C3C2C58007A7004 /* CardView.swift */; };
-		14D6A0252C3E9BCB00DD3DFC /* NextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A0242C3E9BCB00DD3DFC /* NextView.swift */; };
+		14D6A0272C3EB8C000DD3DFC /* GraficCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A0262C3EB8C000DD3DFC /* GraficCircleView.swift */; };
+		14D6A0292C3EC08600DD3DFC /* NutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A0282C3EC08600DD3DFC /* NutritionViewModel.swift */; };
+		14D6A02B2C3EC1AC00DD3DFC /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A02A2C3EC1AC00DD3DFC /* FoodView.swift */; };
+		14D6A02F2C3FFFF500DD3DFC /* TableNutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A02E2C3FFFF500DD3DFC /* TableNutrition.swift */; };
 		14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */; };
 		14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0F42C36EBC60046165F /* ServiceApi.swift */; };
 		B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */; };
@@ -32,7 +35,10 @@
 		14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingChoseView.swift; sourceTree = "<group>"; };
 		14B85AE42C3C1790007A7004 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		14B85AE62C3C2C58007A7004 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		14D6A0242C3E9BCB00DD3DFC /* NextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextView.swift; sourceTree = "<group>"; };
+		14D6A0262C3EB8C000DD3DFC /* GraficCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraficCircleView.swift; sourceTree = "<group>"; };
+		14D6A0282C3EC08600DD3DFC /* NutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewModel.swift; sourceTree = "<group>"; };
+		14D6A02A2C3EC1AC00DD3DFC /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
+		14D6A02E2C3FFFF500DD3DFC /* TableNutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableNutrition.swift; sourceTree = "<group>"; };
 		14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionResponse.swift; sourceTree = "<group>"; };
 		14ECE0F42C36EBC60046165F /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		B82EFAA12C35804F006A818D /* MyCalories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalories.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */,
-				14D6A0242C3E9BCB00DD3DFC /* NextView.swift */,
 				BCD3495E2C3EAA48001375D2 /* InputView.swift */,
 				B88E08E42C3F4C20001A6F29 /* MainPage.swift */,
 			);
@@ -187,6 +192,9 @@
 				B8BC18792C3D7599008290CE /* RouterView.swift */,
 				BCD349572C3EA99D001375D2 /* HeaderView.swift */,
 				BCD349592C3EA9D2001375D2 /* TLButtonView.swift */,
+				14D6A0262C3EB8C000DD3DFC /* GraficCircleView.swift */,
+				14D6A02A2C3EC1AC00DD3DFC /* FoodView.swift */,
+				14D6A02E2C3FFFF500DD3DFC /* TableNutrition.swift */,
 				B88E08E22C3F4BE4001A6F29 /* DailyMealButton.swift */,
 			);
 			path = Components;
@@ -212,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				BCD3495C2C3EAA1F001375D2 /* InputViewViewModel.swift */,
+				14D6A0282C3EC08600DD3DFC /* NutritionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -291,21 +300,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D6A02B2C3EC1AC00DD3DFC /* FoodView.swift in Sources */,
 				BCD3495D2C3EAA1F001375D2 /* InputViewViewModel.swift in Sources */,
 				BCD3495A2C3EA9D2001375D2 /* TLButtonView.swift in Sources */,
-				14D6A0252C3E9BCB00DD3DFC /* NextView.swift in Sources */,
 				14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */,
+				14D6A0292C3EC08600DD3DFC /* NutritionViewModel.swift in Sources */,
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
 				14B85AE52C3C1790007A7004 /* Layout.swift in Sources */,
 				14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */,
 				B8BC18782C3D754E008290CE /* MCRouterDestination.swift in Sources */,
 				B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */,
 				BCD349582C3EA99D001375D2 /* HeaderView.swift in Sources */,
+				14D6A0272C3EB8C000DD3DFC /* GraficCircleView.swift in Sources */,
 				B88E08E52C3F4C20001A6F29 /* MainPage.swift in Sources */,
 				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
 				B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */,
 				B88E08E32C3F4BE4001A6F29 /* DailyMealButton.swift in Sources */,
 				BCD3495F2C3EAA48001375D2 /* InputView.swift in Sources */,
+				14D6A02F2C3FFFF500DD3DFC /* TableNutrition.swift in Sources */,
 				B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */,
 				14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */,
 			);
