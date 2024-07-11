@@ -8,20 +8,29 @@
 import SwiftUI
 
 struct MainPage: View {
+    @EnvironmentObject private var router: AppRouter
+    private var dailyMeals = [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "others"
+    ]
     var body: some View {
         VStack{
             HStack(spacing: 20){
-                DailyMeal("breakfast")
-                DailyMeal("lunch")
-                DailyMeal("dinner")
-                DailyMeal("others")
+                ForEach(dailyMeals, id: \.self){ meal in
+                    DailyMealButton(meal){
+                        //action
+                    }
+                    
+                }
             }
             .padding(.top, 30)
         }
         .toolbar{
             ToolbarItem(placement: .topBarTrailing){
                 Button{
-                    
+                    // goes to Information Realease Page
                 } label: {
                     Image(systemName: "gearshape")
                 }
