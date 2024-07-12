@@ -76,7 +76,7 @@ struct InputView: View {
                 
                 .offset(y:8)
                 .navigationDestination(isPresented: $isActive) {
-                    FoodView()
+                    LabelCView()
                         .environmentObject(viewModel)
                 }
                 if !viewModel.errorMessage.isEmpty{

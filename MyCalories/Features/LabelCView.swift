@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FoodView: View {
+struct LabelCView: View {
     @EnvironmentObject var viewModel: InputViewViewModel
     
     var body: some View {
@@ -29,7 +29,7 @@ struct FoodView: View {
 
 struct foodView_Previews:PreviewProvider{
     static var previews: some View{
-        FoodView()
+        LabelCView()
             .environmentObject(InputViewViewModel())
     }
 }
