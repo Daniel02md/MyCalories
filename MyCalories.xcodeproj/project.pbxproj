@@ -147,6 +147,7 @@
 		B82EFAB62C3581C8006A818D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				14D6A02A2C3EC1AC00DD3DFC /* FoodView.swift */,
 				14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */,
 				BCD3495E2C3EAA48001375D2 /* InputView.swift */,
 				B88E08E42C3F4C20001A6F29 /* MainPage.swift */,
@@ -193,7 +194,6 @@
 				BCD349572C3EA99D001375D2 /* HeaderView.swift */,
 				BCD349592C3EA9D2001375D2 /* TLButtonView.swift */,
 				14D6A0262C3EB8C000DD3DFC /* GraficCircleView.swift */,
-				14D6A02A2C3EC1AC00DD3DFC /* FoodView.swift */,
 				14D6A02E2C3FFFF500DD3DFC /* TableNutrition.swift */,
 				B88E08E22C3F4BE4001A6F29 /* DailyMealButton.swift */,
 			);

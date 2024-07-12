@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct DailyMealButton: View {
+struct DailyMealButton<Destination: View>: View {
     private var name: String
-    private var action: () -> Void
+    private var destination: Destination
     
-    init(_ name: String, action: @escaping () -> Void) {
+    init(_ name: String, destination: Destination) {
         self.name = name
-        self.action = action
+        self.destination = destination
     }
     var body: some View {
-        Button(action: action){
+        NavigationLink(destination: destination) {
             VStack{
                 VStack{
                     Image("cutlery")
@@ -31,8 +31,4 @@ struct DailyMealButton: View {
             }
         }
     }
-}
-
-#Preview {
-    DailyMealButton("breakfast"){}
 }

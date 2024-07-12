@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FoodView: View {
+    var meal: String
     @State private var selectedNutritionType = "cooking"
     @State private var value = ""
     @State private var foodParam = ""
@@ -120,7 +121,7 @@ struct FoodView: View {
                             }
                         })
             }
-            .navigationTitle("Nutrition Analysis")
+            .navigationTitle(meal)
         }
     }
     

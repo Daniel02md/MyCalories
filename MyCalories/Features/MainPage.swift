@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainPage: View {
+    
     @EnvironmentObject private var router: AppRouter
     private var dailyMeals = [
         "breakfast",
@@ -16,29 +17,29 @@ struct MainPage: View {
         "others"
     ]
     var body: some View {
-        VStack{
-            HStack(spacing: 20){
-                ForEach(dailyMeals, id: \.self){ meal in
-                    DailyMealButton(meal){
-                        //action
+        NavigationStack {
+            VStack{
+                HStack(spacing: 20){
+                    ForEach(dailyMeals, id: \.self){ meal in
+                        DailyMealButton(meal, destination: FoodView(meal: meal))
+                        
                     }
-                    
+                }
+                .padding(.top, 30)
+            }
+            .toolbar{
+                ToolbarItem(placement: .topBarTrailing){
+                    Button{
+                        // goes to Information Realease Page
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                    .foregroundColor(.black)
                 }
             }
-            .padding(.top, 30)
+            
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
-        .toolbar{
-            ToolbarItem(placement: .topBarTrailing){
-                Button{
-                    // goes to Information Realease Page
-                } label: {
-                    Image(systemName: "gearshape")
-                }
-                .foregroundColor(.black)
-            }
-        }
-        
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
 }
 
