@@ -9,7 +9,6 @@ import SwiftUI
 
 struct OnBoardingChoseView: View {
     
-    @StateObject var viewModel = InputViewViewModel()
     @EnvironmentObject private var router: AppRouter
     @State private var isActive: Bool = false
     
@@ -34,23 +33,24 @@ struct OnBoardingChoseView: View {
                         .shadow(radius: 10)
                 }
             }
-            .edgesIgnoringSafeArea(.all)
-            .navigationDestination(isPresented: $isActive) {
-                InputView()
-                    .environmentObject(viewModel)
-                    .navigationBarBackButtonHidden(true)
-                    .statusBar(hidden: true)
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            router.navigate(to: .InputView)
-                        }
-                    }
-            }
-            .edgesIgnoringSafeArea(.all)
             
+            
+            .statusBar(hidden: true)
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    isActive = true
+                }
+            }
         }
+        .edgesIgnoringSafeArea(.all)
+        .navigationDestination(isPresented: $isActive){
+            InputView()
+                .navigationBarBackButtonHidden(true)
+        }
+        
     }
 }
+
 
 
 //#Preview {

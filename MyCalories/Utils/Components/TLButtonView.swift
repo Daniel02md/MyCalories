@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-struct TLButtonView: View {
+struct TLButtonView<Destination: View>: View {
+    
     let name: String
     let background: Color
+    var destination: Destination
     var action: () -> Void
+    
     var body: some View {
-        Button{
-      action()
-        }label: {
+        NavigationLink(destination: destination) {
             ZStack{
+                
                 RoundedRectangle(cornerRadius: 50)
                     .foregroundColor(background)
                     .padding()
@@ -29,12 +31,12 @@ struct TLButtonView: View {
     }
 }
 
-struct TLButton_previews: PreviewProvider {
-    static var previews: some View{
-        TLButtonView(name:"value",background: .green) {
-            
-        }
-        
-    }
-}
-
+//struct TLButton_previews: PreviewProvider {
+//    static var previews: some View{
+//        TLButtonView(name:"value",background: .green) {
+//            
+//        }
+//        
+//    }
+//}
+//
