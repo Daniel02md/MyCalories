@@ -22,7 +22,7 @@ final class AppRouter: NavigationRouter, ObservableObject{
             MainPage()
                 .navigationBarBackButtonHidden(true)
         case .FoodView(let title):
-            FoodView()
+            FoodView(meal: "")
                 .navigationTitle(title)
         }
     }
