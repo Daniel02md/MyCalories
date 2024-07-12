@@ -8,5 +8,8 @@
 import Foundation
 
 enum MCRouterDestination: Hashable{
-    
+    case OnBoardingChose
+    case InputView
+    case MainPage
+    case FoodView(title: String)
 }
