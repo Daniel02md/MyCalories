@@ -16,16 +16,28 @@ struct MainPage: View {
         "dinner",
         "others"
     ]
+    
+    @State private var showGraficCircleView = false
+    @State private var selectedMealNutrients: [(name: String, quantity: Double)] = []
+    
+    
     var body: some View {
         NavigationStack {
             VStack{
                 HStack(spacing: 20){
                     ForEach(dailyMeals, id: \.self){ meal in
-                        DailyMealButton(meal, destination: FoodView(meal: meal))
-                        
+                        DailyMealButton(meal, destination: FoodView(meal: meal)) {
+                            showGraficCircleView = true
+                        }
                     }
                 }
                 .padding(.top, 30)
+                
+                if showGraficCircleView {
+                    GraficCircleView(nutrients: selectedMealNutrients, errorMessage: nil, foodName: "Selected Meal")
+                        .frame(height: 300)
+                        .padding()
+                }
             }
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing){
