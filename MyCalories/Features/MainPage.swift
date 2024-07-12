@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainPage: View {
-    
+    @StateObject var viewModel = InputViewViewModel()
     @EnvironmentObject private var router: AppRouter
     private var dailyMeals = [
         "breakfast",
@@ -33,7 +33,8 @@ struct MainPage: View {
                     }
                 }
                 .padding(.top, 30)
-                
+                LabelCView()
+                    .padding()
                 if showGraficCircleView {
                     GraficCircleView(nutrients: selectedMealNutrients, errorMessage: nil, foodName: "Selected Meal")
                         .frame(height: 300)
@@ -42,8 +43,8 @@ struct MainPage: View {
             }
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing){
-                    Button{
-                        // goes to Information Realease Page
+                    NavigationLink {
+                        InputView()
                     } label: {
                         Image(systemName: "gearshape")
                     }

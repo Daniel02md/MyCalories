@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct TLButtonView<Destination: View>: View {
-    
+struct TLButtonView: View {
     let name: String
     let background: Color
-    var destination: Destination
     var action: () -> Void
-    
     var body: some View {
-        NavigationLink(destination: destination) {
+        Button{
+            action()
+        }label: {
             ZStack{
                 
                 RoundedRectangle(cornerRadius: 50)
