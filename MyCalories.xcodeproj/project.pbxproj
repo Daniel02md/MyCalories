@@ -154,11 +154,8 @@
 				14D6A02A2C3EC1AC00DD3DFC /* FoodView.swift */,
 				14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */,
 				BCD3495E2C3EAA48001375D2 /* InputView.swift */,
-<<<<<<< HEAD
 				BC0F33602C4150CF00C4CA1B /* LabelCView.swift */,
-=======
 				B88E08E42C3F4C20001A6F29 /* MainPage.swift */,
->>>>>>> development
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -201,13 +198,10 @@
 				B8BC18792C3D7599008290CE /* RouterView.swift */,
 				BCD349572C3EA99D001375D2 /* HeaderView.swift */,
 				BCD349592C3EA9D2001375D2 /* TLButtonView.swift */,
-<<<<<<< HEAD
 				BC0F33622C41527700C4CA1B /* NumberView.swift */,
-=======
 				14D6A0262C3EB8C000DD3DFC /* GraficCircleView.swift */,
 				14D6A02E2C3FFFF500DD3DFC /* TableNutrition.swift */,
 				B88E08E22C3F4BE4001A6F29 /* DailyMealButton.swift */,
->>>>>>> development
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -328,11 +322,8 @@
 				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
 				BC0F33632C41527700C4CA1B /* NumberView.swift in Sources */,
 				B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */,
-<<<<<<< HEAD
 				BC0F33612C4150CF00C4CA1B /* LabelCView.swift in Sources */,
-=======
 				B88E08E32C3F4BE4001A6F29 /* DailyMealButton.swift in Sources */,
->>>>>>> development
 				BCD3495F2C3EAA48001375D2 /* InputView.swift in Sources */,
 				14D6A02F2C3FFFF500DD3DFC /* TableNutrition.swift in Sources */,
 				B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */,

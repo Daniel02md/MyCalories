@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct OnBoardingChoseView: View {
-<<<<<<< HEAD
+    
     @StateObject var viewModel = InputViewViewModel()
-=======
     @EnvironmentObject private var router: AppRouter
->>>>>>> development
     @State private var isActive: Bool = false
     
     var body: some View {
@@ -36,29 +34,27 @@ struct OnBoardingChoseView: View {
                         .shadow(radius: 10)
                 }
             }
-<<<<<<< HEAD
             .edgesIgnoringSafeArea(.all)
             .navigationDestination(isPresented: $isActive) {
                 InputView()
                     .environmentObject(viewModel)
                     .navigationBarBackButtonHidden(true)
-=======
-            .statusBar(hidden: true)
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    router.navigate(to: .InputView)
-                }
->>>>>>> development
+                    .statusBar(hidden: true)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            router.navigate(to: .InputView)
+                        }
+                    }
             }
+            .edgesIgnoringSafeArea(.all)
+            
         }
-        .edgesIgnoringSafeArea(.all)
-        
     }
 }
 
 
-#Preview {
-    RouterView{
-        OnBoardingChoseView()
-    }
-}
+//#Preview {
+//    RouterView{
+//        OnBoardingChoseView()
+//    }
+//}

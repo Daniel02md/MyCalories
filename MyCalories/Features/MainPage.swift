@@ -26,9 +26,10 @@ struct MainPage: View {
             VStack{
                 HStack(spacing: 20){
                     ForEach(dailyMeals, id: \.self){ meal in
-                        DailyMealButton(meal, destination: FoodView(meal: meal)) {
-                            showGraficCircleView = true
-                        }
+                        DailyMealButton(meal, destination: FoodView(meal: meal)) 
+//                        {
+//                            showGraficCircleView = true
+//                        }
                     }
                 }
                 .padding(.top, 30)
