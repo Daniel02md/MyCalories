@@ -7,16 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */; };
+		14B85AE52C3C1790007A7004 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE42C3C1790007A7004 /* Layout.swift */; };
+		14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE62C3C2C58007A7004 /* CardView.swift */; };
+		14D6A0252C3E9BCB00DD3DFC /* NextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D6A0242C3E9BCB00DD3DFC /* NextView.swift */; };
+		14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */; };
+		14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECE0F42C36EBC60046165F /* ServiceApi.swift */; };
 		B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */; };
 		B82EFAA92C358051006A818D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFAA82C358051006A818D /* Assets.xcassets */; };
 		B82EFAAC2C358051006A818D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B82EFAAB2C358051006A818D /* Preview Assets.xcassets */; };
+		B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18722C3D72C1008290CE /* NavigationRouter.swift */; };
+		B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18752C3D7343008290CE /* MCRouter.swift */; };
+		B8BC18782C3D754E008290CE /* MCRouterDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18772C3D754E008290CE /* MCRouterDestination.swift */; };
+		B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC18792C3D7599008290CE /* RouterView.swift */; };
+		BCD349582C3EA99D001375D2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD349572C3EA99D001375D2 /* HeaderView.swift */; };
+		BCD3495A2C3EA9D2001375D2 /* TLButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD349592C3EA9D2001375D2 /* TLButtonView.swift */; };
+		BCD3495D2C3EAA1F001375D2 /* InputViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3495C2C3EAA1F001375D2 /* InputViewViewModel.swift */; };
+		BCD3495F2C3EAA48001375D2 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD3495E2C3EAA48001375D2 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingChoseView.swift; sourceTree = "<group>"; };
+		14B85AE42C3C1790007A7004 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		14B85AE62C3C2C58007A7004 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		14D6A0242C3E9BCB00DD3DFC /* NextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextView.swift; sourceTree = "<group>"; };
+		14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionResponse.swift; sourceTree = "<group>"; };
+		14ECE0F42C36EBC60046165F /* ServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		B82EFAA12C35804F006A818D /* MyCalories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCalories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82EFAA42C35804F006A818D /* MyCaloriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCaloriesApp.swift; sourceTree = "<group>"; };
 		B82EFAA82C358051006A818D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B82EFAAB2C358051006A818D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8BC18722C3D72C1008290CE /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		B8BC18752C3D7343008290CE /* MCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRouter.swift; sourceTree = "<group>"; };
+		B8BC18772C3D754E008290CE /* MCRouterDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRouterDestination.swift; sourceTree = "<group>"; };
+		B8BC18792C3D7599008290CE /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		BCD349572C3EA99D001375D2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		BCD349592C3EA9D2001375D2 /* TLButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButtonView.swift; sourceTree = "<group>"; };
+		BCD3495C2C3EAA1F001375D2 /* InputViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewViewModel.swift; sourceTree = "<group>"; };
+		BCD3495E2C3EAA48001375D2 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +77,7 @@
 		B82EFAA32C35804F006A818D /* MyCalories */ = {
 			isa = PBXGroup;
 			children = (
+				BCD3495B2C3EAA01001375D2 /* ViewModel */,
 				B82EFAB22C3580F7006A818D /* App */,
 				B82EFAB52C3581B5006A818D /* Models */,
 				B82EFAB42C3581A9006A818D /* Utils */,
@@ -79,6 +108,7 @@
 		B82EFAB32C35819E006A818D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				14ECE0F42C36EBC60046165F /* ServiceApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -86,6 +116,7 @@
 		B82EFAB42C3581A9006A818D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18742C3D730E008290CE /* Classes */,
 				B82EFABF2C359461006A818D /* Components */,
 				B8F62B6D2C361CC7004DA85D /* Styles */,
 				B82EFABA2C358805006A818D /* Protocol */,
@@ -98,6 +129,7 @@
 		B82EFAB52C3581B5006A818D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +137,9 @@
 		B82EFAB62C3581C8006A818D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */,
+				14D6A0242C3E9BCB00DD3DFC /* NextView.swift */,
+				BCD3495E2C3EAA48001375D2 /* InputView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -120,6 +155,7 @@
 		B82EFAB82C3587F5006A818D /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18772C3D754E008290CE /* MCRouterDestination.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -134,6 +170,7 @@
 		B82EFABA2C358805006A818D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18722C3D72C1008290CE /* NavigationRouter.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -141,15 +178,36 @@
 		B82EFABF2C359461006A818D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				14B85AE62C3C2C58007A7004 /* CardView.swift */,
+				B8BC18792C3D7599008290CE /* RouterView.swift */,
+				BCD349572C3EA99D001375D2 /* HeaderView.swift */,
+				BCD349592C3EA9D2001375D2 /* TLButtonView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B8BC18742C3D730E008290CE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC18752C3D7343008290CE /* MCRouter.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		B8F62B6D2C361CC7004DA85D /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				14B85AE42C3C1790007A7004 /* Layout.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		BCD3495B2C3EAA01001375D2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCD3495C2C3EAA1F001375D2 /* InputViewViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +226,8 @@
 			dependencies = (
 			);
 			name = MyCalories;
+			packageProductDependencies = (
+			);
 			productName = MyCalories;
 			productReference = B82EFAA12C35804F006A818D /* MyCalories.app */;
 			productType = "com.apple.product-type.application";
@@ -196,6 +256,9 @@
 				Base,
 			);
 			mainGroup = B82EFA982C35804F006A818D;
+			packageReferences = (
+				14ECE0EF2C36EB850046165F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B82EFAA22C35804F006A818D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,7 +285,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD3495D2C3EAA1F001375D2 /* InputViewViewModel.swift in Sources */,
+				BCD3495A2C3EA9D2001375D2 /* TLButtonView.swift in Sources */,
+				14D6A0252C3E9BCB00DD3DFC /* NextView.swift in Sources */,
+				14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */,
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
+				14B85AE52C3C1790007A7004 /* Layout.swift in Sources */,
+				14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */,
+				B8BC18782C3D754E008290CE /* MCRouterDestination.swift in Sources */,
+				B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */,
+				BCD349582C3EA99D001375D2 /* HeaderView.swift in Sources */,
+				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
+				B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */,
+				BCD3495F2C3EAA48001375D2 /* InputView.swift in Sources */,
+				B8BC18762C3D7343008290CE /* MCRouter.swift in Sources */,
+				14ECE0F52C36EBC60046165F /* ServiceApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyCalories/Preview Content\"";
+				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -384,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyCalories/Preview Content\"";
+				DEVELOPMENT_TEAM = 7P3G4Y9CSP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -426,6 +505,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14ECE0EF2C36EB850046165F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = B82EFA992C35804F006A818D /* Project object */;
 }
