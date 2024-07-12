@@ -8,42 +8,44 @@
 import Foundation
 import Combine
 
-
 class InputViewViewModel: ObservableObject{
-    @MainActor @Published var Age: Int = 0
-    @MainActor @Published var Height: Double = 0
-    @MainActor @Published var Weight: Double = 0.0
-    @MainActor @Published var SelectedObjective: Objective = .maintain
-    @MainActor @Published var SelectedActivity: Activity = .sedentary
-    @MainActor @Published var SelectedGender: Gender = .male
-    //@MainActor var errorMessage = ""
-    @MainActor @Published var Calories: Double = 0.0
-    @MainActor @Published var CarboG: Double = 0.0
-    @MainActor @Published var ProteinG: Double = 0.0
-    @MainActor @Published var FatG: Double = 0.0
+    @Published var Age: Int = 0
+    @Published var Height: Double = 0
+    @Published var Weight: Double = 0.0
+    @Published var SelectedObjective: Objective = .maintain
+    @Published var SelectedActivity: Activity = .sedentary
+    @Published var SelectedGender: Gender = .male
+    @Published var errorMessage = ""
+    @Published var Calories: Double = 0.0
+    @Published var CarboG: Double = 0.0
+    @Published var ProteinG: Double = 0.0
+    @Published var FatG: Double = 0.0
     
-    
-    
-    /*
-    func start(){
-        guard Validate() else{
-            return
-        }
-        // try login
-    }
-    
-    private func Validate() -> Bool{
+  
+     func Validate() -> Bool{
         errorMessage = ""
-        guard !Height.isEmpty,!Weight.isEmpty, Age.isEmpty else{
-            
-            errorMessage = "fill all fields"
+         
+         if !validateNumericInput("\(Age)") || !validateNumericInput("\(Height)") || !validateNumericInput("\(Weight)") {
+             errorMessage = "fill all fields with natural numbers"
+             return false
+
+         }
+        guard Height > 0.0 || Weight > 0.0 || Age > 0 else{
+            errorMessage = "fill all fields with natural numbers"
             return false
         }
         return true
     }
-    */
     
-    @MainActor func calculateCalories(){
+    private func validateNumericInput(_ value: String) -> Bool {
+        return Double(value) != nil
+    }
+    
+    
+    func calculateCalories(){
+        guard Validate() else{
+            return
+        }
         if SelectedGender == .male{
             Calories = (88.362 + (13.397 * Weight) + (4.799 * Height) - (5.677 * Double(Age))) * SelectedActivity.rawValue * SelectedObjective.rawValue
             
@@ -53,31 +55,19 @@ class InputViewViewModel: ObservableObject{
          }
         
     }
-
      
-    @MainActor func calculateMacros(){
-        FatG = (Calories * 0.25)/9
+     func calculateMacros(){
+         guard Validate() else{
+             return
+         }
+         FatG = (Calories * 0.25)/9
         CarboG = (Calories * 0.45)/4
         ProteinG = (Calories * 0.30)/4
+         
+       
     }
+    
 }
-/*
- calcular calorias
- 
- 25% de gordura
- 30% proteina
- 45% carboidrato
- 
- ex: 2400 calorias
- 
- Grams_Fat = (2400 * 0.25)/9
- Grams_Protein = (2400 * 0.30)/4
- Grams_Carbs = (2400 * 0.45)/4
- if age = 0 {
- text("age")
- }
- 
- */
 
 
 enum Gender: String,CaseIterable,Identifiable{
