@@ -65,7 +65,7 @@ struct InputView: View {
                 
                 
                 
-                TLButtonView(name: "Finish profile", background: .green, destination: MainPage()) {
+                TLButtonView(name: "Finish profile", background: .green) {
                     if viewModel.Validate() {
                         viewModel.calculateCalories()
                         viewModel.calculateMacros()
@@ -74,11 +74,11 @@ struct InputView: View {
                     }
                 }
                 .navigationBarBackButtonHidden(true)
-                
                 .offset(y:8)
                 .navigationDestination(isPresented: $isActive) {
-                    LabelCView()
+                        MainPage()
                         .environmentObject(viewModel)
+                        .navigationBarBackButtonHidden(true)
                 }
                 if !viewModel.errorMessage.isEmpty{
                     Text(viewModel.errorMessage)
@@ -89,7 +89,8 @@ struct InputView: View {
             .offset(y: 20)
             
         }
-        //.navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 
