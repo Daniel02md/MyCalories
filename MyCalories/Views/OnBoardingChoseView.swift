@@ -53,10 +53,3 @@ struct OnBoardingChoseView: View {
     }
 }
 
-
-
-//#Preview {
-//    RouterView{
-//        OnBoardingChoseView()
-//    }
-//}
