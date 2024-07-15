@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14890A5B2C44070600795695 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14890A5A2C44070600795695 /* Gender.swift */; };
+		14890A5D2C44073100795695 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14890A5C2C44073100795695 /* Activity.swift */; };
+		14890A5F2C44076300795695 /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14890A5E2C44076300795695 /* Objective.swift */; };
+		14A93A7B2C4545FF00D8327E /* Nutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A93A7A2C4545FF00D8327E /* Nutrient.swift */; };
 		14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */; };
 		14B85AE52C3C1790007A7004 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE42C3C1790007A7004 /* Layout.swift */; };
 		14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B85AE62C3C2C58007A7004 /* CardView.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14890A5A2C44070600795695 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		14890A5C2C44073100795695 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		14890A5E2C44076300795695 /* Objective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
+		14A93A7A2C4545FF00D8327E /* Nutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrient.swift; sourceTree = "<group>"; };
 		14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingChoseView.swift; sourceTree = "<group>"; };
 		14B85AE42C3C1790007A7004 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		14B85AE62C3C2C58007A7004 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -95,7 +103,7 @@
 				B82EFAB22C3580F7006A818D /* App */,
 				B82EFAB52C3581B5006A818D /* Models */,
 				B82EFAB42C3581A9006A818D /* Utils */,
-				B82EFAB62C3581C8006A818D /* Features */,
+				B82EFAB62C3581C8006A818D /* Views */,
 				B82EFAB32C35819E006A818D /* Services */,
 				B82EFAB72C3581E2006A818D /* Resources */,
 				B82EFAAA2C358051006A818D /* Preview Content */,
@@ -130,11 +138,10 @@
 		B82EFAB42C3581A9006A818D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B8BC18742C3D730E008290CE /* Classes */,
+				B8BC18742C3D730E008290CE /* Router */,
 				B82EFABF2C359461006A818D /* Components */,
-				B8F62B6D2C361CC7004DA85D /* Styles */,
 				B82EFABA2C358805006A818D /* Protocol */,
-				B82EFAB92C3587FE006A818D /* Structs */,
+				B82EFAB92C3587FE006A818D /* Extensions */,
 				B82EFAB82C3587F5006A818D /* Enums */,
 			);
 			path = Utils;
@@ -144,20 +151,20 @@
 			isa = PBXGroup;
 			children = (
 				14ECE0ED2C36EAFC0046165F /* NutritionResponse.swift */,
+				14A93A7A2C4545FF00D8327E /* Nutrient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B82EFAB62C3581C8006A818D /* Features */ = {
+		B82EFAB62C3581C8006A818D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				14D6A02A2C3EC1AC00DD3DFC /* FoodView.swift */,
 				14B85AE22C3C06D7007A7004 /* OnBoardingChoseView.swift */,
 				BCD3495E2C3EAA48001375D2 /* InputView.swift */,
-				BC0F33602C4150CF00C4CA1B /* LabelCView.swift */,
 				B88E08E42C3F4C20001A6F29 /* MainPage.swift */,
 			);
-			path = Features;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B82EFAB72C3581E2006A818D /* Resources */ = {
@@ -172,15 +179,20 @@
 			isa = PBXGroup;
 			children = (
 				B8BC18772C3D754E008290CE /* MCRouterDestination.swift */,
+				14890A5A2C44070600795695 /* Gender.swift */,
+				14890A5C2C44073100795695 /* Activity.swift */,
+				14890A5E2C44076300795695 /* Objective.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		B82EFAB92C3587FE006A818D /* Structs */ = {
+		B82EFAB92C3587FE006A818D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BC0F33622C41527700C4CA1B /* NumberView.swift */,
+				14B85AE42C3C1790007A7004 /* Layout.swift */,
 			);
-			path = Structs;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B82EFABA2C358805006A818D /* Protocol */ = {
@@ -194,11 +206,10 @@
 		B82EFABF2C359461006A818D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BC0F33602C4150CF00C4CA1B /* LabelCView.swift */,
 				14B85AE62C3C2C58007A7004 /* CardView.swift */,
-				B8BC18792C3D7599008290CE /* RouterView.swift */,
 				BCD349572C3EA99D001375D2 /* HeaderView.swift */,
 				BCD349592C3EA9D2001375D2 /* TLButtonView.swift */,
-				BC0F33622C41527700C4CA1B /* NumberView.swift */,
 				14D6A0262C3EB8C000DD3DFC /* GraficCircleView.swift */,
 				14D6A02E2C3FFFF500DD3DFC /* TableNutrition.swift */,
 				B88E08E22C3F4BE4001A6F29 /* DailyMealButton.swift */,
@@ -206,20 +217,13 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		B8BC18742C3D730E008290CE /* Classes */ = {
+		B8BC18742C3D730E008290CE /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC18792C3D7599008290CE /* RouterView.swift */,
 				B8BC18752C3D7343008290CE /* MCRouter.swift */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		B8F62B6D2C361CC7004DA85D /* Styles */ = {
-			isa = PBXGroup;
-			children = (
-				14B85AE42C3C1790007A7004 /* Layout.swift */,
-			);
-			path = Styles;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		BCD3495B2C3EAA01001375D2 /* ViewModel */ = {
@@ -309,8 +313,10 @@
 				14D6A02B2C3EC1AC00DD3DFC /* FoodView.swift in Sources */,
 				BCD3495D2C3EAA1F001375D2 /* InputViewViewModel.swift in Sources */,
 				BCD3495A2C3EA9D2001375D2 /* TLButtonView.swift in Sources */,
+				14890A5B2C44070600795695 /* Gender.swift in Sources */,
 				14B85AE32C3C06D7007A7004 /* OnBoardingChoseView.swift in Sources */,
 				14D6A0292C3EC08600DD3DFC /* NutritionViewModel.swift in Sources */,
+				14890A5D2C44073100795695 /* Activity.swift in Sources */,
 				B82EFAA52C35804F006A818D /* MyCaloriesApp.swift in Sources */,
 				14B85AE52C3C1790007A7004 /* Layout.swift in Sources */,
 				14B85AE72C3C2C58007A7004 /* CardView.swift in Sources */,
@@ -318,7 +324,9 @@
 				B8BC187A2C3D7599008290CE /* RouterView.swift in Sources */,
 				BCD349582C3EA99D001375D2 /* HeaderView.swift in Sources */,
 				14D6A0272C3EB8C000DD3DFC /* GraficCircleView.swift in Sources */,
+				14A93A7B2C4545FF00D8327E /* Nutrient.swift in Sources */,
 				B88E08E52C3F4C20001A6F29 /* MainPage.swift in Sources */,
+				14890A5F2C44076300795695 /* Objective.swift in Sources */,
 				14ECE0EE2C36EAFC0046165F /* NutritionResponse.swift in Sources */,
 				BC0F33632C41527700C4CA1B /* NumberView.swift in Sources */,
 				B8BC18732C3D72C1008290CE /* NavigationRouter.swift in Sources */,

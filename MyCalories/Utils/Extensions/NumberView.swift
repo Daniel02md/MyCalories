@@ -12,14 +12,12 @@ extension NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .none
         formatter.maximumFractionDigits = 0
-        formatter.minimum = 0
         return formatter
     }
     static var decimalFormatter: NumberFormatter{
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
-        formatter.minimum = 0
         return formatter
     }
 }

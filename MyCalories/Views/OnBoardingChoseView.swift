@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnBoardingChoseView: View {
     
+    @StateObject var viewModel = InputViewViewModel()
     @EnvironmentObject private var router: AppRouter
     @State private var isActive: Bool = false
     
@@ -45,16 +46,10 @@ struct OnBoardingChoseView: View {
         .edgesIgnoringSafeArea(.all)
         .navigationDestination(isPresented: $isActive){
             InputView()
+                .environmentObject(viewModel)
                 .navigationBarBackButtonHidden(true)
         }
         
     }
 }
 
-
-
-//#Preview {
-//    RouterView{
-//        OnBoardingChoseView()
-//    }
-//}

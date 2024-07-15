@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FoodView: View {
     var meal: String
+    @Binding var selectedMealNutrients: [Nutrient]
     @State private var selectedNutritionType = "cooking"
     @State private var value = ""
     @State private var foodParam = ""
@@ -73,7 +74,7 @@ struct FoodView: View {
             }
             
             HStack {
-                TextField("Value", text: $value)
+                TextField("Quantity", text: $value)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .textInputAutocapitalization(.never)
@@ -86,7 +87,7 @@ struct FoodView: View {
                 }
             }
             
-            TextField("Food Parameter", text: $foodParam)
+            TextField("Food", text: $foodParam)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
                 .textInputAutocapitalization(.never)
@@ -98,7 +99,7 @@ struct FoodView: View {
                     errorMessage: errorMessage,
                     foodName: foodParam)) {
                         
-                        Text("Nutrition Analysis")
+                        Text("Add Food")
                             .foregroundColor(.white)
                             .padding()
                             .background(Color.green)
@@ -110,12 +111,15 @@ struct FoodView: View {
                             if let response = response {
                                 self.nutritionResponse = response
                                 self.errorMessage = nil
+                                self.selectedMealNutrients = extractKeyNutrients(response)
                             } else if let error = error {
                                 self.errorMessage = error.localizedDescription
                                 self.nutritionResponse = nil
+                                self.selectedMealNutrients = []
                             } else if let code = code {
                                 self.errorMessage = code.message
                                 self.nutritionResponse = nil
+                                self.selectedMealNutrients = []
                             }
                         }
                     })
@@ -124,18 +128,17 @@ struct FoodView: View {
     }
 }
 
-func extractKeyNutrients(_ response: NutritionResponse?) -> [(name: String, quantity: Double)] {
+func extractKeyNutrients(_ response: NutritionResponse?) -> [Nutrient] {
     guard let response = response else { return [] }
-    var nutrients: [(name: String, quantity: Double)] = []
+    var nutrients: [Nutrient] = []
     if let calories = response.totalNutrients["ENERC_KCAL"]?.quantity {
-        nutrients.append((name: "Calories", quantity: calories))
+        nutrients.append(Nutrient(name: "Calories", quantity: calories))
     }
     if let fats = response.totalNutrients["FAT"]?.quantity {
-        nutrients.append((name: "Total Fat", quantity: fats))
+        nutrients.append(Nutrient(name: "Total Fat", quantity: fats))
     }
     if let proteins = response.totalNutrients["PROCNT"]?.quantity {
-        nutrients.append((name: "Protein", quantity: proteins))
+        nutrients.append(Nutrient(name: "Protein", quantity: proteins))
     }
     return nutrients
 }
-

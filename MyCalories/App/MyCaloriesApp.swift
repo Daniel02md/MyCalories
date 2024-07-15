@@ -12,7 +12,7 @@ struct MyCaloriesApp: App {
     var body: some Scene {
         WindowGroup {
             RouterView{
-               OnBoardingChoseView()
+                OnBoardingChoseView()
             }
         }
     }
