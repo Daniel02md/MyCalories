@@ -17,21 +17,19 @@ struct RouterView<Content: View>: View {
     }
     
     var body: some View {
-            NavigationStack(path: $router.navigationPath) {
-                content
-                    .navigationDestination(for: MCRouterDestination.self) { route in
-                        
-                        router.view(for: route)
-                    }
-            }
-            .environmentObject(router)
+        NavigationStack(path: $router.navigationPath) {
+            content
+                .navigationDestination(for: MCRouterDestination.self) { route in
+                    router.view(for: route)
+                }
         }
-    
+        .environmentObject(router)
+    }
 }
 
 #Preview {
-    
-    RouterView{
+    RouterView {
         Text("teste")
     }
 }
+

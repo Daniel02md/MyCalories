@@ -18,7 +18,7 @@ struct MainPage: View {
     ]
     
     @State private var showGraficCircleView = false
-    @State private var selectedMealNutrients: [(name: String, quantity: Double)] = []
+    @State private var selectedMealNutrients: [Nutrient] = []
     @State private var nutritionResponse = NutritionResponse(
             uri: "",
             calories: 220.0,
@@ -41,14 +41,13 @@ struct MainPage: View {
     
     
     var body: some View {
-        NavigationStack {
-            VStack{
-                HStack(spacing: 20){
-                    ForEach(dailyMeals, id: \.self){ meal in
-                        DailyMealButton(meal, destination: FoodView(meal: meal)) 
-//                        {
-//                            showGraficCircleView = true
-//                        }
+        NavigationStack(path: $router.navigationPath) {
+            VStack {
+                HStack(spacing: 20) {
+                    ForEach(dailyMeals, id: \.self) { meal in
+                        DailyMealButton(meal) {
+                            FoodView(meal: meal, selectedMealNutrients: $selectedMealNutrients)
+                        }
                     }
                 }
                 .padding(.top, 30)
@@ -60,8 +59,11 @@ struct MainPage: View {
                         .padding()
                 }
             }
-            .toolbar{
-                ToolbarItem(placement: .topBarTrailing){
+            .onChange(of: selectedMealNutrients) { newValue in
+                showGraficCircleView = !newValue.isEmpty
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink {
                         InputView()
                     } label: {
@@ -70,14 +72,13 @@ struct MainPage: View {
                     .foregroundColor(.black)
                 }
             }
-            
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
     }
 }
 
 #Preview {
-    RouterView{
+    RouterView {
         MainPage()
     }
 }
