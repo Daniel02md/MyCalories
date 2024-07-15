@@ -19,6 +19,26 @@ struct MainPage: View {
     
     @State private var showGraficCircleView = false
     @State private var selectedMealNutrients: [Nutrient] = []
+    @State private var nutritionResponse = NutritionResponse(
+            uri: "",
+            calories: 220.0,
+            totalCO2Emissions: 0.0,
+            co2EmissionsClass: "",
+            totalWeight: 0.0,
+            dietLabels: [],
+            healthLabels: [],
+            cautions: [],
+            totalNutrients: [:],
+            totalDaily: [:],
+            ingredients: [],
+            totalNutrientsKCal: TotalNutrientsKCal(
+                enercKcal: TotalNutrient(label: "", quantity: 0.0, unit: ""),
+                procntKcal: TotalNutrient(label: "", quantity: 0.0, unit: ""),
+                fatKcal: TotalNutrient(label: "", quantity: 0.0, unit: ""),
+                chocdfKcal: TotalNutrient(label: "", quantity: 0.0, unit: "")
+            )
+        )
+    
     
     var body: some View {
         NavigationStack(path: $router.navigationPath) {
@@ -31,7 +51,7 @@ struct MainPage: View {
                     }
                 }
                 .padding(.top, 30)
-                LabelCView()
+                LabelCView(nutritionResponse: nutritionResponse)
                     .padding()
                 if showGraficCircleView {
                     GraficCircleView(nutrients: selectedMealNutrients, errorMessage: nil, foodName: "Selected Meal")
