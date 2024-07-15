@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 
 struct GraficCircleView: View {
-    let nutrients: [(name: String, quantity: Double)]
+    let nutrients: [Nutrient]
     let errorMessage: String?
     let foodName: String
     
@@ -26,7 +26,7 @@ struct GraficCircleView: View {
         }
     }
     
-    var selectedNutrient: (name: String, quantity: Double)? {
+    var selectedNutrient: Nutrient? {
         if let selectedQuantity,
            let selectedIndex = cumulativeNutrientRanges
             .firstIndex(where: { $0.range.contains(selectedQuantity) }) {
@@ -96,5 +96,3 @@ struct GraficCircleView: View {
         }
     }
 }
-
-

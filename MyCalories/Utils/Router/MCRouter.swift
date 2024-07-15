@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-final class AppRouter: NavigationRouter, ObservableObject{
-
+final class AppRouter: ObservableObject {
+    
     typealias Destination = MCRouterDestination
     
+    @Published var navigationPath: NavigationPath = NavigationPath()
+    
     @ViewBuilder func view(for route: Destination) -> some View {
-        switch(route){
+        switch(route) {
         case .InputView:
             InputView()
                 .navigationBarHidden(true)
@@ -21,13 +23,11 @@ final class AppRouter: NavigationRouter, ObservableObject{
         case .MainPage:
             MainPage()
                 .navigationBarBackButtonHidden(true)
-        case .FoodView(let title):
-            FoodView(meal: "")
+        case .FoodView(let title, let selectedMealNutrients):
+            FoodView(meal: title, selectedMealNutrients: selectedMealNutrients)
                 .navigationTitle(title)
         }
     }
-    
-    @Published var navigationPath: NavigationPath = NavigationPath()
     
     func navigate(to destination: Destination) {
         self.navigationPath.append(destination)
@@ -44,6 +44,4 @@ final class AppRouter: NavigationRouter, ObservableObject{
     func navigateToRoot() {
         navigationPath.removeLast(navigationPath.count)
     }
-    
-    
 }
