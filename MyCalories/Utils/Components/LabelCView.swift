@@ -16,9 +16,9 @@ struct LabelCView: View {
             VStack{
                 GroupBox(label: Text("calories")){
                     VStack(alignment: .leading, spacing: 8){
-                        Text("daily Calories: \(viewModel.Calories,specifier: "%.0f")")
-                         Text("consumed calories: \(nutritionResponse.calories,specifier: "%.0f")")
-                        Text("Remaining calories \(viewModel.Calories - nutritionResponse.calories,specifier: "%.0f")")
+                        Text("Daily Calories: \(viewModel.Calories,specifier: "%.0f")")
+//                         Text("consumed calories: \(nutritionResponse.calories,specifier: "%.0f")")
+//                        Text("Remaining calories \(viewModel.Calories - nutritionResponse.calories,specifier: "%.0f")")
                     }
                     
                 }
